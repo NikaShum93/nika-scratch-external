@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nika Scratch External</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+    #label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(255, 0, 128, 0.85);
+      color: white;
+      font-family: sans-serif;
+      font-size: 14px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkle 0.6s forwards;
+    }
+    @keyframes sparkle {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="label">🧽 Волшебный Ластик</div>
+  <canvas id="canvas"></canvas>
+  <audio id="sound" src="erase-sound.mp3" preload="auto" loop></audio>
+  <script src="external.js"></script>
+</body>
+</html>
